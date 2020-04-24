@@ -65,3 +65,4 @@ arrange(mtcars, carb)
   # Create vector x which is the alternation of 1 and 2, 75 times, check the length
   # Attach x to iris as dataframe "irisx", check the head
   # Get the colsums of columns 1,3,4 in the "irisx" dataset by the new x variable
+
