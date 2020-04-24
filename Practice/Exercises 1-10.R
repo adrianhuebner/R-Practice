@@ -65,4 +65,23 @@ arrange(mtcars, carb)
   # Create vector x which is the alternation of 1 and 2, 75 times, check the length
   # Attach x to iris as dataframe "irisx", check the head
   # Get the colsums of columns 1,3,4 in the "irisx" dataset by the new x variable
+by(iris[,1:2], iris$Species, colMeans)
+x = rep(1:2, times=75); length(x)
+irisx = data.frame(iris, x); head(irisx)
+by(irisx[,c(1,3,4)], irisx$x, colSums)
+
+## Question 9:
+  # How many observations in "lynx" are smaller than 500
+  # How many observations in "iris" 'have a Sepal.Length greater or equal 5
+sum(lynx < 500)
+sum(iris$Sepal.Length >= 5)
+
+## Question 10:
+  # Plot a simple xy plot with "iris" Sepal.Length vs Sepal.Width
+  # Enlarge the scale limits: y from 0-5, x from 3-9
+  # Add a text of your choosing, in red, at the lower part of the plot
+attach(iris)
+plot(Sepal.Length, Sepal.Width)
+plot(Sepal.Length, Sepal.Width, ylim = c(0,5), xlim = c(3,9))
+text(5,1, "Iris Plot Graph", col = "red", cex=2, lwd=2)
 
