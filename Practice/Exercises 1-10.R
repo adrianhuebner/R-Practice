@@ -2,6 +2,7 @@
 
 # lynx dataset is a time series with the number of annual lynx trappings in Canada from 1821-1934
 # iris dataset is from Ronald Fisher's 1936 which contains three plant species and four feature measured for each sample
+# mtcars dataset is a dataset that comes from the 1974 Motor Trends magazine
 
 ## Question 1: 
   # Get the length of the "lynx" dataset
@@ -45,3 +46,23 @@ remove.packages("dplyr")
 myvec = c(1, rep(x, times=4), 1)
 library(dplyr)
 nth(myvec, 5)
+
+## Question 6: 
+  # Get a subset of "mtcars" with transmission type: manual, and call it mysubset
+  # Extract the first 2 variables of the first 2 observations of mysubset
+mysubset = subset(mtcars, am == 1)
+mysubset[c(1,2), c(1,2)]
+
+## Question 7:
+  # Get the first 9 observations of "mtcars"
+  # Get the "mtcars" dataset ordered according to the increading amount of "carb" (hint: library dplyr, arrange)
+head(mtcars, 9)
+library(dplyr)
+arrange(mtcars, carb)
+
+## Question 8:
+  # Get the means of the firs 2 columns in the "iris" dataset by Species
+  # Create vector x which is the alternation of 1 and 2, 75 times, check the length
+  # Attach x to iris as dataframe "irisx", check the head
+  # Get the colsums of columns 1,3,4 in the "irisx" dataset by the new x variable
+
