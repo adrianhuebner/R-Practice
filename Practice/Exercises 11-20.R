@@ -4,7 +4,14 @@
   # Write a function "myfun" of x to the power of its index position
   # Test the function with an x of 1:10
   # Enlarge the function "myfun" with a division through the index position
-
+      myfun = function(x){
+        x ^ (1 : length(x))
+      }
+      myfun(1:10)
+      myfun = function(x){
+        x ^ ((1 : length(x)) / (1 : length(x)))
+      }
+      myfun(1:10)
 ## Question 12:
   # Write a simple moving average function(lenght = 3)
   # Use it on the "lynx" dataset
