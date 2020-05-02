@@ -12,8 +12,9 @@
         x ^ ((1 : length(x)) / (1 : length(x)))
       }
       myfun(1:10)
+      
 ## Question 12:
-  # Write a simple moving average function(lenght = 3)
+  # Write a simple moving average function(length = 3)
   # Use it on the "lynx" dataset
   # Plot the SMA object in a time series class and start at the beginning of lynx + 2
 
